@@ -1,5 +1,13 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+
 public class Radio {
 
     private int maxNumberStation = 10;
@@ -9,54 +17,6 @@ public class Radio {
     private int minVolume = 0;
     private int currentVolume = 40;
 
-    public Radio() {
-    }
-
-    public Radio(int maxNumberStation, int minNumberStation, int currentNumberStation, int maxVolume, int minVolume, int currentVolume) {
-        this.maxNumberStation = maxNumberStation;
-        this.minNumberStation = minNumberStation;
-        this.currentNumberStation = currentNumberStation;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.currentVolume = currentVolume;
-    }
-
-
-    public int getMaxNumberStation() {
-        return maxNumberStation;
-    }
-
-    public void setMaxNumberStation(int maxNumberStation) {
-        this.maxNumberStation = maxNumberStation;
-    }
-
-    public int getMinNumberStation() {
-        return minNumberStation;
-    }
-
-    public void setMinNumberStation(int minNumberStation) {
-        this.minNumberStation = minNumberStation;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
 
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume > maxVolume) {
@@ -68,9 +28,9 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
-    public int getCurrentNumberStation() {
-        return currentNumberStation;
-    }
+//    public int getCurrentNumberStation() {
+//        return currentNumberStation;
+//    }
 
     public void setCurrentNumberStation(int currentNumberStation) {
         if (currentNumberStation > maxNumberStation) {
